@@ -19,7 +19,7 @@ const Search = ({search, setSearch, setData, setFlag}) => {
     setFlag(true)
     document.getElementById('showResultsFor').textContent = `Movie Results For '${actualSearch}'`
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=4bc4b891&s=${search}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=4bc4b891&s=${search}`);
       setData(response.data.Search);
       console.log(response.data.Search)
     } catch (error) {

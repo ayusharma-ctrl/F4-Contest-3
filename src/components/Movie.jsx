@@ -13,7 +13,7 @@ const Movie = () => {
 
   const showSearchResult = async () => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=4bc4b891&i=${movieID}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=4bc4b891&i=${movieID}`);
       setMovieData(response.data);
     } catch (error) {
       console.log("Error: ==> " + error);
